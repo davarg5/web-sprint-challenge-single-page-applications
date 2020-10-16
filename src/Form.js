@@ -18,6 +18,10 @@ const PizzaImg = styled.img`
     border: 2px solid gray;
 `
 
+const Errors = styled.div`
+    color: red;
+`
+
 export default function Form(props) {
     const { values, submit, change, disabled, errors } = props;
 
@@ -42,7 +46,7 @@ export default function Form(props) {
             <FormInputs>
             <h3>Choice of Size</h3>
             <p>Required</p>
-            <div>{errors.size}</div>
+            <Errors>{errors.size}</Errors>
             </FormInputs>
             <select name='size' value={values.role} onChange={onChange}>
                 <option value=''>---Select a size----</option>
@@ -98,7 +102,7 @@ export default function Form(props) {
             <FormInputs>
             <h3>Name</h3>
             </FormInputs>
-            <div>{errors.name}</div>
+            <Errors>{errors.name}</Errors>
             <input
             type='text'
             name='name'
