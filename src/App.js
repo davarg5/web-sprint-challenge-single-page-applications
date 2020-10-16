@@ -7,10 +7,10 @@ const App = () => {
   const initialFormValues = {
     name: '',
     size: '',
-    pepperoni: '',
-    sausage: '',
-    ham: '',
-    bacon: '',
+    pepperoni: false,
+    sausage: false,
+    ham: false,
+    bacon: false,
     special_instructions: ''
 
   }
@@ -42,7 +42,7 @@ const App = () => {
       }),
       special_instructions: formValues.special_instructions.trim()
     }
-    postNewUser(newOrder);
+    //postNewUser(newOrder);
   }
 
   return (
